@@ -27,3 +27,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     margin-top: 10px;
 }
+
+.Homepage_maincontent {
+    margin-top: 150px;
+  }
