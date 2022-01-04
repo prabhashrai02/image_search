@@ -28,7 +28,7 @@ class Homepage extends Component {
                 
                 var srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
                 return(
-                    <img src={srcPath}></img>
+                    <img alt="" src={srcPath}></img>
                 )
             })
             this.setState({pictures: picArray});
@@ -59,7 +59,7 @@ class Homepage extends Component {
                 
                 var srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
                 return(
-                    <img src={srcPath}></img>
+                    <img alt="" src={srcPath}></img>
                 )
             })
             this.setState({
@@ -96,9 +96,15 @@ class Homepage extends Component {
                             <div className='Homepage_loader'></div>
                         }
                     >
-                        {this.state.pictures}
+                        
+                        <div className='arrange'>
+                            {this.state.pictures.map(pic => (
+                                <div className='Maincontent_image'>
+                                    {pic}
+                                </div>
+                            ))}
+                        </div>
                     </InfiniteScroll>
-
                 </div>
             </div>
         );
