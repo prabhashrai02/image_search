@@ -82,7 +82,7 @@ class Homepage extends Component {
                         onChange={this.HandleChange}   
                         onKeyUp={()=>this.Delay(function(){
                             this.ReloadImage();
-                        }.bind(this), 1000)}
+                        }.bind(this), 500)}
                         />
                 </div>
                 <div className='Homepage_maincontent'>
@@ -92,8 +92,10 @@ class Homepage extends Component {
                             this.fetchMoreData();
                         }.bind(this), 3000)}
                         hasMore={this.state.pictures.length !== this.state.totalresults}
-                        loader= {<h4>Loading...</h4>}
-                        >
+                        loader= {
+                            <div className='Homepage_loader'></div>
+                        }
+                    >
                         {this.state.pictures}
                     </InfiniteScroll>
 
