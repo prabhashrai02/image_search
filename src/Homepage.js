@@ -37,6 +37,7 @@ class Homepage extends Component {
     
     HandleChange=(e)=>{
         this.setState({textInput: e.target.value});
+        window.scrollTo(0, 0);
     }
     
     Delay = (function(){
