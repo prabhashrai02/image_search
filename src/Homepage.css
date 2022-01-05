@@ -11,7 +11,8 @@ body{
     font-size: xx-large;
     font-weight: bolder;
     font-family: Helvetica, Arial, sans-serif;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     top: 0;
     color: white;
 }
@@ -83,5 +84,9 @@ body{
 
     .Navbar_search {
         margin-left: 0;
+    }
+
+    .Homepage_navigation {
+        text-align: center;
     }
 }
