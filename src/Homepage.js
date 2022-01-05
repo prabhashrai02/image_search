@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Homepage.css';
 import InfiniteScroll from "react-infinite-scroll-component";
+import { Spinner } from "react-loading-io";
 
 class Homepage extends Component {
     constructor(props) {
@@ -93,7 +94,8 @@ class Homepage extends Component {
                         }.bind(this), 3000)}
                         hasMore={this.state.pictures.length !== this.state.totalresults}
                         loader= {
-                            <div className='Homepage_loader'></div>
+                            <Spinner size={100} className='Homepage_Loader' />
+                            // <div className='Homepage_loader'></div>
                         }
                     >
                         
