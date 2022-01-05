@@ -75,11 +75,11 @@ class Homepage extends Component {
         return (  
             <div>
                 <div className='Homepage_navigation'>
-                    Search Image
+                    Spenny 
                     <input 
                         className='Navbar_search' 
                         type="text" 
-                        placeholder='Search here'
+                        placeholder='Search photos'
                         onChange={this.HandleChange}   
                         onKeyUp={()=>this.Delay(function(){
                             this.ReloadImage();
@@ -91,17 +91,16 @@ class Homepage extends Component {
                         dataLength={this.state.pictures.length}
                         next={()=>this.Delay(function(){
                             this.fetchMoreData();
-                        }.bind(this), 3000)}
+                        }.bind(this), 0)}
                         hasMore={this.state.pictures.length !== this.state.totalresults}
                         loader= {
-                            <Spinner size={100} className='Homepage_Loader' />
-                            // <div className='Homepage_loader'></div>
+                            <Spinner size={100} color="black" className='Homepage_Loader' />
                         }
                     >
                         
                         <div className='arrange'>
                             {this.state.pictures.map(pic => (
-                                <div className='Maincontent_image'>
+                                <div key={pic.id} className='Maincontent_image'>
                                     {pic}
                                 </div>
                             ))}
