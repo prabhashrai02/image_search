@@ -18,17 +18,17 @@ body{
 
 .Navbar_search {
     border: 1px solid black;
-    width: 300px;
+    width: 30%;
     font-size: medium;
     padding: 15px;
-    border-radius: 100px;
+    border-radius: 25px;
     background-color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 10px;
 }
 
 .Homepage_maincontent {
-    margin-top: 145px;
+    margin-top: 100px;
 }
 
 .Homepage_loader {
@@ -44,12 +44,38 @@ body{
 }
 
 .arrange {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    position: inherit;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2vmin;
+    grid-auto-flow: dense;
 }
 
 .Maincontent_image {
-    padding: 10px;
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1050px){
+    .arrange{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .arrange{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .arrange{
+        grid-template-columns: auto;
+    }
 }
