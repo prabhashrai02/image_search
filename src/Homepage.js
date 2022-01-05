@@ -75,11 +75,10 @@ class Homepage extends Component {
             <div>
                 <div className='Homepage_navigation'>
                     Search Image
-                    < br />
                     <input 
                         className='Navbar_search' 
                         type="text" 
-                        placeholder='Search anything!!!'
+                        placeholder='Search here'
                         onChange={this.HandleChange}   
                         onKeyUp={()=>this.Delay(function(){
                             this.ReloadImage();

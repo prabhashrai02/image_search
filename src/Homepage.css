@@ -18,13 +18,15 @@ body{
 
 .Navbar_search {
     border: 1px solid black;
-    width: 30%;
+    margin-left: 30px;
+    width: 50%;
     font-size: medium;
     padding: 15px;
     border-radius: 25px;
     background-color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat';
     margin-top: 10px;
+    text-align: center;
 }
 
 .Homepage_maincontent {
@@ -77,5 +79,9 @@ body{
 @media screen and (max-width: 450px){
     .arrange{
         grid-template-columns: auto;
+    }
+
+    .Navbar_search {
+        margin-left: 0;
     }
 }
