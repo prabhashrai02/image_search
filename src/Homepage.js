@@ -19,7 +19,11 @@ class Homepage extends Component {
     }
     
     ReloadImage=()=>{
-        fetch('https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=e52a287d86469bf01ea901dfd92cf8a5&text=:'+this.state.textInput+'&media=photos&per_page=15&page='+this.state.page+'&format=json&nojsoncallback=1')        
+        fetch('https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=e52a287d86469bf01ea901dfd92cf8a5&text=:'
+        +this.state.textInput
+        +'&media=photos&per_page=15&page='
+        +this.state.page
+        +'&format=json&nojsoncallback=1')        
         
         .then(function(response){
             return response.json();
@@ -29,7 +33,7 @@ class Homepage extends Component {
                 
                 var srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
                 return(
-                    <img alt="" src={srcPath}></img>
+                    <img alt="" src={srcPath} key={pic.id}></img>
                 )
             })
             this.setState({pictures: picArray});
