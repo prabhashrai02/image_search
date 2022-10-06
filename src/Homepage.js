@@ -33,7 +33,7 @@ class Homepage extends Component {
                 
                 var srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
                 return(
-                    <img alt="" src={srcPath} key={pic.id}></img>
+                    <img alt="" src={srcPath} key={pic.id} className='Maincontent_image'></img>
                 )
             })
             this.setState({pictures: picArray});
